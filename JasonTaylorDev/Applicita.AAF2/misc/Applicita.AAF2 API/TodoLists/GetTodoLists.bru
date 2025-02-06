@@ -1,0 +1,15 @@
+meta {
+  name: GetTodoLists
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/TodoLists
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: {{apiKey}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: PostApiUsersManageInfo
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/Users/manage/info
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+body:json {
+  {
+    "newEmail": "",
+    "newPassword": "",
+    "oldPassword": ""
+  }
+}

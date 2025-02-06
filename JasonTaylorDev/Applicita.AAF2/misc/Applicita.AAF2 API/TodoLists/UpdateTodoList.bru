@@ -1,0 +1,26 @@
+meta {
+  name: UpdateTodoList
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/api/TodoLists/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+body:json {
+  {
+    "id": "",
+    "title": ""
+  }
+}

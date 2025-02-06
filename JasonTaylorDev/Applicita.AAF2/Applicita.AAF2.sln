@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF2.Domain", "src\Domain\Applicita.AAF2.Domain.csproj", "{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF2.Application", "src\Application\Applicita.AAF2.Application.csproj", "{34C0FACD-F3D9-400C-8945-554DD6B0819A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF2.Infrastructure", "src\Infrastructure\Applicita.AAF2.Infrastructure.csproj", "{117DA02F-5274-4565-ACC6-DA9B6E568B09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6ED356A7-8B47-4613-AD01-C85CF28491BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{664D406C-2F83-48F0-BFC3-408D5CB53C65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF.Application.UnitTests", "tests\Application.UnitTests\Applicita.AAF.Application.UnitTests.csproj", "{DEFF4009-1FAB-4392-80B6-707E2DC5C00B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF.Domain.UnitTests", "tests\Domain.UnitTests\Applicita.AAF.Domain.UnitTests.csproj", "{DC37FD87-552C-4613-9F16-1537CA522898}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2DA20AA-28D1-455C-BF50-C49A8F831633}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF2.Api", "src\Api\Applicita.AAF2.Api.csproj", "{4E4EE20C-F06A-4A1B-851F-C5577796941C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicita.AAF.Application.FunctionalTests", "tests\Application.FunctionalTests\Applicita.AAF.Application.FunctionalTests.csproj", "{EA6127A5-94C9-4C31-AD11-E6811B92B520}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IApplicita.AAF.nfrastructure.IntegrationTests", "tests\Infrastructure.IntegrationTests\IApplicita.AAF.nfrastructure.IntegrationTests.csproj", "{01FA6786-921D-4CE8-8C50-4FDA66C9477D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicita.AAF2.AppHost", "src\AppHost\Applicita.AAF2.AppHost.csproj", "{36483B25-E165-46F3-AA1C-ADE75A46BD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicita.AAF2.ServiceDefaults", "src\ServiceDefaults\Applicita.AAF2.ServiceDefaults.csproj", "{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicita.AAF2.MigrationService", "src\MigrationService\Applicita.AAF2.MigrationService.csproj", "{870DA84A-3675-4BFD-A4D3-60941FFE2799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C0FACD-F3D9-400C-8945-554DD6B0819A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C0FACD-F3D9-400C-8945-554DD6B0819A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C0FACD-F3D9-400C-8945-554DD6B0819A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C0FACD-F3D9-400C-8945-554DD6B0819A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117DA02F-5274-4565-ACC6-DA9B6E568B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117DA02F-5274-4565-ACC6-DA9B6E568B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117DA02F-5274-4565-ACC6-DA9B6E568B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117DA02F-5274-4565-ACC6-DA9B6E568B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFF4009-1FAB-4392-80B6-707E2DC5C00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFF4009-1FAB-4392-80B6-707E2DC5C00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFF4009-1FAB-4392-80B6-707E2DC5C00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFF4009-1FAB-4392-80B6-707E2DC5C00B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC37FD87-552C-4613-9F16-1537CA522898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC37FD87-552C-4613-9F16-1537CA522898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC37FD87-552C-4613-9F16-1537CA522898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC37FD87-552C-4613-9F16-1537CA522898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4EE20C-F06A-4A1B-851F-C5577796941C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4EE20C-F06A-4A1B-851F-C5577796941C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4EE20C-F06A-4A1B-851F-C5577796941C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4EE20C-F06A-4A1B-851F-C5577796941C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6127A5-94C9-4C31-AD11-E6811B92B520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6127A5-94C9-4C31-AD11-E6811B92B520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6127A5-94C9-4C31-AD11-E6811B92B520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6127A5-94C9-4C31-AD11-E6811B92B520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FA6786-921D-4CE8-8C50-4FDA66C9477D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FA6786-921D-4CE8-8C50-4FDA66C9477D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FA6786-921D-4CE8-8C50-4FDA66C9477D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FA6786-921D-4CE8-8C50-4FDA66C9477D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36483B25-E165-46F3-AA1C-ADE75A46BD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36483B25-E165-46F3-AA1C-ADE75A46BD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36483B25-E165-46F3-AA1C-ADE75A46BD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36483B25-E165-46F3-AA1C-ADE75A46BD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870DA84A-3675-4BFD-A4D3-60941FFE2799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870DA84A-3675-4BFD-A4D3-60941FFE2799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870DA84A-3675-4BFD-A4D3-60941FFE2799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870DA84A-3675-4BFD-A4D3-60941FFE2799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7E89A3E-A631-4760-8D61-BD1EAB1C4E69} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{34C0FACD-F3D9-400C-8945-554DD6B0819A} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{117DA02F-5274-4565-ACC6-DA9B6E568B09} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{DEFF4009-1FAB-4392-80B6-707E2DC5C00B} = {664D406C-2F83-48F0-BFC3-408D5CB53C65}
+		{DC37FD87-552C-4613-9F16-1537CA522898} = {664D406C-2F83-48F0-BFC3-408D5CB53C65}
+		{4E4EE20C-F06A-4A1B-851F-C5577796941C} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{EA6127A5-94C9-4C31-AD11-E6811B92B520} = {664D406C-2F83-48F0-BFC3-408D5CB53C65}
+		{01FA6786-921D-4CE8-8C50-4FDA66C9477D} = {664D406C-2F83-48F0-BFC3-408D5CB53C65}
+		{36483B25-E165-46F3-AA1C-ADE75A46BD8E} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{15AFAC17-7E6E-4DB9-A5D9-EA96C5287CD2} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{870DA84A-3675-4BFD-A4D3-60941FFE2799} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CB609D9-5D54-4C11-A371-DAAC8B74E430}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,39 @@
+2025-02-01 04:43:02.548 +00:00 [INF] Registered 5 endpoints in 635 milliseconds.
+2025-02-01 04:43:03.340 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-02-01 04:43:03.420 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2025-02-01 04:43:03.582 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-02-01 04:43:03.689 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-02-01 04:43:03.698 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-02-01 04:43:03.972 +00:00 [INF] Now listening on: https://localhost:53585
+2025-02-01 04:43:03.976 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-01 04:43:04.457 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-01 04:43:04.457 +00:00 [INF] Hosting environment: Development
+2025-02-01 04:43:04.457 +00:00 [INF] Content root path: C:\Users\JohnKattenhorn\Documents\Code\CleanArchitecture.Eval\Ardalis\Applicita.AAF2\src\Applicita.AAF2.Web
+2025-02-01 04:43:05.852 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2025-02-01 04:43:05.930 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 86.6037ms
+2025-02-01 04:43:05.936 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-02-01 04:43:05.956 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 19.8725ms
+2025-02-01 04:43:05.970 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-01 04:43:05.974 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 3.8376ms
+2025-02-01 04:43:05.991 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-02-01 04:43:06.034 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5846ms
+2025-02-01 04:43:06.251 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-02-01 04:43:06.284 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 32.7478ms

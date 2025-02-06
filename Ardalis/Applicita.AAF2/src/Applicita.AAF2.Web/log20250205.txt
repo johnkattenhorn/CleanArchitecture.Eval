@@ -1,0 +1,51 @@
+2025-02-05 20:17:52.491 +00:00 [INF] Registered 5 endpoints in 439 milliseconds.
+2025-02-05 20:17:53.289 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-05 20:17:53.376 +00:00 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-02-05 20:17:53.465 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Contributors] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Status] int NOT NULL,
+    [PhoneNumber_CountryCode] nvarchar(max) NULL,
+    [PhoneNumber_Number] nvarchar(max) NULL,
+    [PhoneNumber_Extension] nvarchar(max) NULL,
+    CONSTRAINT [PK_Contributors] PRIMARY KEY ([Id])
+);
+2025-02-05 20:17:53.648 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Contributors] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-05 20:17:53.779 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 100), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Contributors] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1)) AS i ([Name], [Status], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Name], [Status])
+VALUES (i.[Name], i.[Status])
+OUTPUT INSERTED.[Id], i._Position;
+2025-02-05 20:17:54.018 +00:00 [INF] Now listening on: https://localhost:63508
+2025-02-05 20:17:54.021 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-05 20:17:54.076 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-05 20:17:54.076 +00:00 [INF] Hosting environment: Development
+2025-02-05 20:17:54.076 +00:00 [INF] Content root path: C:\Users\JohnKattenhorn\Documents\Code\CleanArchitecture.Eval\Ardalis\Applicita.AAF2\src\Applicita.AAF2.Web

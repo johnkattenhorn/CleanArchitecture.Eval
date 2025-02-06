@@ -1,0 +1,21 @@
+meta {
+  name: PostApiUsersRefresh
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/Users/refresh
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+body:json {
+  {
+    "refreshToken": ""
+  }
+}
