@@ -2,6 +2,7 @@
 using Applicita.AAF2.Application.TodoLists.DeleteTodoList;
 using Applicita.AAF2.Application.TodoLists.GetTodos;
 using Applicita.AAF2.Application.TodoLists.UpdateTodoList;
+using Ardalis.Result;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Applicita.AAF2.Web.Endpoints;
@@ -25,11 +26,21 @@ public class TodoLists : EndpointGroupBase
         return TypedResults.Ok(vm);
     }
 
-    public async Task<Created<int>> CreateTodoList(ISender sender, CreateTodoListCommand command)
+    public async Task<Results<Created<int>,BadRequest>> CreateTodoList(ISender sender, CreateTodoListCommand command)
     {
-        var id = await sender.Send(command);
+        var results = await sender.Send(command);
 
-        return TypedResults.Created($"/{nameof(TodoLists)}/{id}", id);
+        if(results.IsSuccess)
+        {
+            var id = results.Value;
+            return TypedResults.Created($"/{nameof(TodoLists)}/{id}", id);
+        }
+        else
+        {
+            return TypedResults.BadRequest();
+        }
+
+        
     }
 
     public async Task<Results<NoContent, BadRequest>> UpdateTodoList(ISender sender, int id, UpdateTodoListCommand command)
