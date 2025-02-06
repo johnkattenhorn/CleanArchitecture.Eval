@@ -1,0 +1,21 @@
+meta {
+  name: GetApiUsersConfirmEmail
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/Users/confirmEmail
+  body: none
+  auth: none
+}
+
+params:query {
+  userId: 
+  code: 
+  ~changedEmail: 
+}
+
+headers {
+  Authorization: {{apiKey}}
+}

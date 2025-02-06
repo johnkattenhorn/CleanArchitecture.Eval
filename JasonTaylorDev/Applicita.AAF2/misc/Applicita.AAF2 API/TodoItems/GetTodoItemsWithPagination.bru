@@ -1,0 +1,21 @@
+meta {
+  name: GetTodoItemsWithPagination
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/TodoItems
+  body: none
+  auth: none
+}
+
+params:query {
+  ListId: 
+  PageNumber: 
+  PageSize: 
+}
+
+headers {
+  Authorization: {{apiKey}}
+}

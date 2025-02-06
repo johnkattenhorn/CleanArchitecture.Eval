@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Applicita.AAF2.Application</RootNamespace>
+    <AssemblyName>Applicita.AAF2.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\OpenTelemetry\OtelMassTransit\**" />
+    <EmbeddedResource Remove="Common\OpenTelemetry\OtelMassTransit\**" />
+    <None Remove="Common\OpenTelemetry\OtelMassTransit\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\Behaviours\ValidationBehaviour.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="OpenTelemetry" />
+    <PackageReference Include="OpenTelemetry.Api" />
+    <PackageReference Include="Serilog" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Applicita.AAF2.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\OpenTelemetry\" />
+  </ItemGroup>
+
+</Project>

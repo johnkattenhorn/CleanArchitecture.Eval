@@ -1,0 +1,25 @@
+meta {
+  name: PostApiUsersManage2fa
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/api/Users/manage/2fa
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+body:json {
+  {
+    "enable": "",
+    "twoFactorCode": "",
+    "resetSharedKey": "",
+    "resetRecoveryCodes": "",
+    "forgetMachine": ""
+  }
+}

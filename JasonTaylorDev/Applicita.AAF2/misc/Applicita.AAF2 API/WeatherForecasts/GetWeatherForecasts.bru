@@ -1,0 +1,19 @@
+meta {
+  name: GetWeatherForecasts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/WeatherForecasts
+  body: none
+  auth: bearer
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+auth:bearer {
+  token: CfDJ8AdDfCKMzkZIvXJA4bqNfEy7ilgUOF4riZD3xBY0mM8M6lJeWBQ5EBErznmRGUUtiLumhaQFyycs_2r-sb5_amBUarhe6fvEyLc7oWrW3YmfGA-j9yxJTSnTNkVlDDcXxIntyh2d3br2IM-oWpgofjGEzPnmjay9DN-rYtGztXtX2QAjmc1dgliX4oCF5phNprbRdH-CHNDDUgeUicN20J_ebABEW8aVSDosOCHJ7PsBBBpzvDoADAtyjypUTW_hgAC94BIR1Cc-Lz4VMv0ha7Y6zMB_XgeT35uZ5hoESSmT1UanAdqNDcR08jXbG5nRAe2r3IKCd6TaYHbPfzYwUePZXht7EKvu8R-So9AMPezt8Jysc-z3xFuaAUGkE9GfY-pO85ngScwNGsanjc-LHdCQuZNX7DZGyfTLOwhzpPurdCz5gTx-wj5WkryJ6-fCLO0hjRZ3Du6kMV5f3t5Hy0ECbRoXdB4C5RjZ-TUP_vjp59V4Y4JEV9zE7vJOLq3pJU3z8TOrx3PIwkOjzligBEHYibv8Z0C1Isc99aIxm_ueaqf-AH03TebE7JhCP6UO1q4lKF9V3TilAmnRHNUxzn-N2OO5cN0FrEWs993gry5lDJ6NBC6ME0cOJMJhpNQxX8QpJ1VmjQFOWO8Z_PTGf4T3fcjiBK4TjjbEzMquQbyEDa17slQ1QliT-SDBkxLbWDtZ3qFGyJHbUyRN9lgKtRovVl6kVNqFqJZ-Dvo5EPL2JeYUAFQRnjF_2S1D47huAXCX5CTqws888EGxeKoPx1nf9-bl82GDH5A3ULr4T_v6RYCVCzsAVvBEXdJ_4WaJuw
+}

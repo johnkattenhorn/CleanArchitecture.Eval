@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <RootNamespace>Applicita.AAF2.AppHost</RootNamespace>
+    <AssemblyName>Applicita.AAF2.AppHost</AssemblyName>
+    <UserSecretsId>14beefa0-9759-47a0-a1b6-5da4133797ff</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.Seq" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MigrationService\Applicita.AAF2.MigrationService.csproj" />
+    <ProjectReference Include="..\Api\Applicita.AAF2.Api.csproj" />
+  </ItemGroup>
+
+</Project>

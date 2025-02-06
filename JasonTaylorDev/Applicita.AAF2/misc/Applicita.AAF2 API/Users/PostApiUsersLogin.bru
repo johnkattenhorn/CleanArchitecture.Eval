@@ -1,0 +1,29 @@
+meta {
+  name: PostApiUsersLogin
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/Users/login
+  body: json
+  auth: none
+}
+
+params:query {
+  ~useCookies: 
+  ~useSessionCookies: 
+}
+
+headers {
+  Authorization: {{apiKey}}
+}
+
+body:json {
+  {
+    "email": "administrator@localhost",
+    "password": "Administrator1!",
+    "twoFactorCode": "string",
+    "twoFactorRecoveryCode": "string"
+  }
+}
